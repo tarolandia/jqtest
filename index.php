@@ -2,6 +2,7 @@
 <html>
     <head>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.3/jquery-ui.min.js"></script>
         <style>
             #cont{
                 position: relative;
@@ -193,7 +194,9 @@
             function add_div(){
                 var rand = Math.floor(Math.random()*10);
                 var rand2 = Math.floor(Math.random()*10);
-                $('<div class="hello rand'+rand+' randf'+rand2+'"></div>').appendTo('#cont');
+                var el = $('<div class="hello rand'+rand+' randf'+rand2+'"></div>');
+                $(el).appendTo('#cont');
+                $(el).draggable({ containment: 'parent' });
             }
             
             function add_li(texto){
