@@ -27,6 +27,7 @@
                 border: 1px solid yellow;
                 margin: 1px 2px;
                 padding: 2px 1px;
+                cursor: pointer;
             }
             
             .selected{
